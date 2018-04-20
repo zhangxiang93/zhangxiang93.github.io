@@ -88,7 +88,7 @@
 <meta property="og:description" content="node.js环境Node.js 官网：https://nodejs.org/en/  下载最新版，这里是windows64位8.11.1LTS然后双击默认安装打开命令窗口，输入1node -v 如果显示node版本号，那么说明安装成功。  git环境Git 官网：https://git-scm.com/ 下载安装包，默认安装。 右键打开Git Bush Here，输入git --version，">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p8.qhimg.com/t01fabe5a259b78b8a1.png">
-<meta property="og:updated_time" content="2018-04-20T10:41:31.343Z">
+<meta property="og:updated_time" content="2018-04-20T10:44:16.303Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git搭建个人博客简明指南">
 <meta name="twitter:description" content="node.js环境Node.js 官网：https://nodejs.org/en/  下载最新版，这里是windows64位8.11.1LTS然后双击默认安装打开命令窗口，输入1node -v 如果显示node版本号，那么说明安装成功。  git环境Git 官网：https://git-scm.com/ 下载安装包，默认安装。 右键打开Git Bush Here，输入git --version，">
@@ -433,6 +433,7 @@
 <hr>
 <h3 id="Github注册和配置"><a href="#Github注册和配置" class="headerlink" title="Github注册和配置"></a>Github注册和配置</h3><p><a href="https://github.com/" target="_blank" rel="noopener">Github注册：https://github.com/</a></p>
 <p>注册成功后，创建一个新的仓库，仓库名为你的用户名<code>yourname</code>，例如<code>zhangxiang93/zhangxiang93.github.io</code>。<br>访问 <code>yourname.github.io</code>，如果可以正常访问，那么 <code>Github</code> 的配置已经结束了。</p>
+<hr>
 <h3 id="HEXO安装配置"><a href="#HEXO安装配置" class="headerlink" title="HEXO安装配置"></a>HEXO安装配置</h3><p><code>Hexo</code> 是一个快速、简洁且高效的博客框架，使用 <code>Markdown</code>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 <p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">官方文档:https://hexo.io/zh-cn/</a></p>
 <p>1.安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure></p>
@@ -443,6 +444,7 @@
 <p>3.运行服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></p>
 <p>or<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
 <p>网页地址栏输入<code>http://localhost:4000</code>，如果能够正常访问，则说明 <code>Hexo</code> 本地博客已经搭建起来了.(只是本地)<br>如果提示找不到命令，那么需要安装一下<code>server</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install hexo-server --save</span><br></pre></td></tr></table></figure></p>
+<hr>
 <h3 id="关联Hexo与Github"><a href="#关联Hexo与Github" class="headerlink" title="关联Hexo与Github"></a>关联Hexo与Github</h3><p>生成与<code>github</code>关联的<code>ssh</code>密匙，参考我的<code>git</code>文章：<a href="https://github.com/zhangxiang93/My-Tech-Doc/blob/master/Git/%E7%94%9F%E6%88%90ssh%E5%AF%86%E5%8C%99.md" target="_blank" rel="noopener">生成ssh密匙</a></p>
 <p>把<code>ssh-key</code>添加到<code>github</code>，然后输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
 <p>反馈<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host ‘github.com (207.97.227.239)’ can’t be established.</span><br><span class="line">RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span><br><span class="line">Are you sure you want to continue connecting (yes/no)?</span><br></pre></td></tr></table></figure></p>
@@ -451,16 +453,19 @@
 <p>配置<code>Deloyment</code>，在<code>_config.yml</code>中修改<code>git</code>地址<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:zhangxiang93/zhangxiang93.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
 <p>本地文件提交到<code>Github</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 删除旧的 public 文件</span><br><span class="line">hexo clean</span><br><span class="line">// 生成新的 public 文件</span><br><span class="line">hexo g</span><br><span class="line">// 开始部署</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
 <p>然后，浏览器输入地址<code>zhangxiang93.github.io</code>，看到<code>hexo</code>引导页，即说明成功关联。</p>
+<hr>
 <h3 id="README-md文件部署"><a href="#README-md文件部署" class="headerlink" title="README.md文件部署"></a>README.md文件部署</h3><ul>
 <li><code>Hexo</code>原理就是<code>hexo</code>在执行<code>hexo generate</code>时会在本地先把博客生成的一套静态站点放到<code>public</code>文件夹中，在执行<code>hexo deploy</code>时将其复制到<code>.deploy</code>文件夹中。</li>
 <li><code>hexo</code>默认情况下会把所有<code>md</code>文件解析成<code>html</code>文件，所以即使你在线生成了 <code>README. md</code>，它也会在你下一次部署时被<code>删去</code>。</li>
 <li>在执行<code>hexo deploy</code>前把在本地写好的<code>README.md</code>文件复制到<code>.deploy</code>文件夹中，再去执行<code>hexo deploy</code>。</li>
 </ul>
+<hr>
 <h3 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名</h3><p>这里可以看个人意愿，如果不想额外支出，就访问<code>github</code>默认地址也可以。<br>1.阿里云买个域名，博客地址重定向到该域名（即绑定），我自己的：<a href="http://zxxiang.top">zxxiang.top</a><br>2.在<code>Github</code>根目录下新建一个<code>CNAME</code>的文本文件，打开文件，输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zxxiang.top</span><br></pre></td></tr></table></figure></p>
 <p>不要加<code>http://</code>，<code>CNAME</code> 一定是在你 <code>Github</code> 项目的 <code>master</code> 根目录下<br>3.进入阿里云域名解析地址，添加解析：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">记录类型选择 CNAME</span><br><span class="line">主机记录填 www</span><br><span class="line">解析线路选择默认</span><br><span class="line">记录值填 yourname.github.io</span><br><span class="line">TTL值为 10 分钟</span><br><span class="line">再添加一个解析，记录类型 A</span><br><span class="line">主机记录填 www</span><br><span class="line">解析线路选择默认</span><br><span class="line">记录值填你 GitHub 的 ip 地址（在cmd中ping：ping bxm0927.github.com）</span><br></pre></td></tr></table></figure></p>
 <p>4.保存，等待1分钟，访问自己的域名，ok<br>5.<code>CNAME</code>文件在每次<code>hexo</code>部署的时候都会被删除，可以安装插件永久保留<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-cname --save</span><br></pre></td></tr></table></figure></p>
 <p>之后在<code>_config.yml</code>文件里配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plugins:</span><br><span class="line">- hexo-generator-cname</span><br></pre></td></tr></table></figure></p>
 <p>这样之后，每次<code>deploy</code>之后<code>CNAME</code>都是<code>yoursite.com</code>，可以添加配置<code>_config.yml</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: http://zxxiang.top</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure></p>
+<hr>
 <h3 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h3><p>至此恭喜你的<code>blog</code>已经完成，下面我们来发布一篇自己的第一篇博文。<br>1.新建<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;文章标题&quot;</span><br></pre></td></tr></table></figure></p>
 <p>2.在<code>source\_posts</code>文件夹下找到，刚创建的<code>markdown</code>文件<br>3.文件编辑完以后，发布<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
 <p>4.文章添加标签<code>tags</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tags: [a, b, c]</span><br><span class="line">或</span><br><span class="line">tags:</span><br><span class="line">  - a</span><br><span class="line">  - b</span><br><span class="line">  - c</span><br></pre></td></tr></table></figure></p>
@@ -490,6 +495,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: 分类</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: false</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<hr>
 <h3 id="主题NEXT"><a href="#主题NEXT" class="headerlink" title="主题NEXT"></a>主题NEXT</h3><p>到这里就满足了，有点早。<br>我们应该给我们的<code>blog</code>，搭配一套酷炫的主题，才符合你高大帅气有才的身份。<br>这里我推荐<code>hexo</code>的最佳<code>CP</code>——<code>NEXT</code>主题</p>
 <p>安装方法参考官网：<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NEXT主题安装</a></p>
 <p>配置文件如图</p>
@@ -498,6 +504,7 @@
 <p>主题配置参考：<a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">NEXT主题配置</a></p>
 <p>更换主题图标：<a href="https://fontawesome.com/icons?d=listing" target="_blank" rel="noopener">NEXT主题图标</a></p>
 <p>详细优化（包括添加评论，打赏）；<a href="https://zhuanlan.zhihu.com/p/33616481" target="_blank" rel="noopener">NEXT详细优化</a></p>
+<hr>
 <h3 id="多客户端管理发布博客"><a href="#多客户端管理发布博客" class="headerlink" title="多客户端管理发布博客"></a>多客户端管理发布博客</h3><p>你一定有公司家里两台电脑发布文章的需求。下面介绍下操作</p>
 <h5 id="公司电脑"><a href="#公司电脑" class="headerlink" title="公司电脑"></a>公司电脑</h5><ol>
 <li><p>备份博客内容到<code>github</code>，在<code>.gitignore</code>添加</p>
