@@ -3,6 +3,30 @@
 
 
     
+  <url>
+    <loc>http://zxxiang.top/2018/04/24/%E4%BD%BF%E7%94%A8webpack%E6%9E%84%E5%BB%BAweb%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2018-04-24T11:23:10.090Z</lastmod>
+    <data>
+        <display>
+        <title>使用webpack构建web项目实战入门</title>
+        <pubTime>2018-04-24T09:58:28.000Z</pubTime>
+        
+        <tag>webpack</tag>
+         
+        <tag>node</tag>
+         
+        <tag>实战</tag>
+         
+         
+           
+             
+              <breadCrumb title="Webpack" url="http://zxxiang.top/categories/Webpack/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
   <url>
@@ -39,11 +63,11 @@
         <title>Cheerio--抓取网页数据实战</title>
         <pubTime>2018-04-20T10:51:47.000Z</pubTime>
         
+        <tag>node</tag>
+         
         <tag>cheerio</tag>
          
         <tag>爬虫</tag>
-         
-        <tag>node</tag>
          
         <tag>npm</tag>
          
